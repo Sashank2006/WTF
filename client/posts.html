@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050a0d" />
+  <title>WTF // Writings</title>
+  <meta name="description" content="WTF writings — book reviews, random tech, personal thoughts, and life & wisdom." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=VT323&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/tokens.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/pages.css" />
+
+  <link rel="icon" href="./assets/img/glyphs/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="shell">
+
+    <!-- ===== Ticker ===== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" data-ticker-items>
+        <span class="ticker__item">// WRITINGS</span>
+        <span class="ticker__item">WTF // 002 OF 003</span>
+        <span class="ticker__item">FOLDERS // 04</span>
+        <span class="ticker__item">POSTS // 0</span>
+        <span class="ticker__item">SELECT A FOLDER TO ENTER</span>
+        <span class="ticker__item">ゲートウェイ</span>
+        <span class="ticker__item">SYS 02 // 002340</span>
+        <span class="ticker__item">// WRITINGS</span>
+        <span class="ticker__item">WTF // 002 OF 003</span>
+        <span class="ticker__item">FOLDERS // 04</span>
+        <span class="ticker__item">POSTS // 0</span>
+      </div>
+    </div>
+
+    <main class="shell__main">
+
+      <!-- Section header -->
+      <header>
+        <div class="section-header">
+          <div>
+            <h2 class="section-header__title">002 // Writings</h2>
+            <p class="muted mono" style="font-size: var(--fs-mono); letter-spacing: 0.15em; margin-top: var(--space-2);">
+              FOUR FOLDERS &nbsp;//&nbsp; ZERO POSTS &nbsp;//&nbsp; YOUR MOVE
+            </p>
+          </div>
+          <div class="section-header__meta">STATUS // OPEN</div>
+        </div>
+      </header>
+
+      <!-- Cover card grid -->
+      <section class="posts-grid" aria-label="WTF folders">
+
+        <!-- BOOK REVIEWS -->
+        <a class="cover-card" href="#" aria-label="Book Reviews folder">
+          <div class="cover-card__art">
+            <img src="./assets/img/covers/book-reviews.jpg" alt=""
+                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'cover-card__art-placeholder',textContent:'BOOK\nREVIEWS'}))" />
+          </div>
+          <h3 class="cover-card__title">Book Reviews</h3>
+          <div class="cover-card__meta">
+            POSTS: 0 &nbsp;//&nbsp; LATEST: —
+          </div>
+        </a>
+
+        <!-- RANDOM TECH -->
+        <a class="cover-card" href="#" aria-label="Random Tech folder">
+          <div class="cover-card__art">
+            <img src="./assets/img/covers/random-tech.jpg" alt=""
+                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'cover-card__art-placeholder',textContent:'RANDOM\nTECH'}))" />
+          </div>
+          <h3 class="cover-card__title">Random Tech</h3>
+          <div class="cover-card__meta">
+            POSTS: 0 &nbsp;//&nbsp; LATEST: —
+          </div>
+        </a>
+
+        <!-- PERSONAL THOUGHTS -->
+        <a class="cover-card" href="#" aria-label="Personal Thoughts folder">
+          <div class="cover-card__art">
+            <img src="./assets/img/covers/personal-thoughts.jpg" alt=""
+                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'cover-card__art-placeholder',textContent:'PERSONAL\nTHOUGHTS'}))" />
+          </div>
+          <h3 class="cover-card__title">Personal Thoughts</h3>
+          <div class="cover-card__meta">
+            POSTS: 0 &nbsp;//&nbsp; LATEST: —
+          </div>
+        </a>
+
+        <!-- LIFE / WISDOM -->
+        <a class="cover-card" href="#" aria-label="Life & Wisdom folder">
+          <div class="cover-card__art">
+            <img src="./assets/img/covers/life-wisdom.jpg" alt=""
+                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'cover-card__art-placeholder',textContent:'LIFE\nWISDOM'}))" />
+          </div>
+          <h3 class="cover-card__title">Life &amp; Wisdom</h3>
+          <div class="cover-card__meta">
+            POSTS: 0 &nbsp;//&nbsp; LATEST: —
+          </div>
+        </a>
+      </section>
+
+      <!-- Coming soon note -->
+      <section>
+        <div class="hud-window">
+          <div class="hud-window__label">002 // NOTE</div>
+          <div class="hud-window__index">002 / 003</div>
+          <p class="mono" style="font-size: var(--fs-mono-lg); letter-spacing: 0.05em; line-height: var(--lh-body); color: var(--ink);">
+            POSTS COMING SOON. UNTIL THEN, SEND A MESSAGE FROM THE
+            <a href="./contact.html" style="color: var(--accent); border-bottom: 1px solid var(--accent);">CONTACT PAGE</a>
+            AND TELL ME WHAT YOU WANT TO READ FIRST.
+          </p>
+        </div>
+      </section>
+
+      <!-- Site footer -->
+      <footer class="site-foot">
+        COPYRIGHT WTF // <span id="year"></span> &nbsp;//&nbsp;
+        <a href="./index.html">HOME</a> &nbsp;//&nbsp;
+        <a href="./contact.html">CONTACT</a>
+      </footer>
+    </main>
+
+    <!-- ===== Scroll rail ===== -->
+    <nav class="scroll-rail" data-scroll-rail aria-label="Section navigation">
+      <a class="scroll-rail__item" href="./index.html">
+        <span>001</span><span>// HOME</span>
+      </a>
+      <a class="scroll-rail__item is-active" href="./posts.html">
+        <span>002</span><span>// WRITINGS</span>
+      </a>
+      <a class="scroll-rail__item" href="./contact.html">
+        <span>003</span><span>// CONTACT</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/ticker.js"></script>
+  <script src="./assets/js/scroll-rail.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

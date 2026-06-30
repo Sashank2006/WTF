@@ -1,0 +1,82 @@
+/* =========================================================
+   tokens.css — design tokens for WTF
+   Extracted from portal.thenifty.com (ref1) and ref2/3.
+   ========================================================= */
+
+:root {
+  /* Color palette */
+  --bg:          #050a0d;          /* primary background — near-black, cool tint */
+  --bg-alt:      #0a1218;          /* slightly lifted background for layered surfaces */
+  --bg-deep:     #02060a;          /* deepest background, used for hero photo behind ASCII */
+  --ink:         #e8dcc4;          /* primary ink — warm cream */
+  --ink-bright:  #f4ecd8;          /* brighter cream for headings */
+  --ink-dim:     #6e7a82;          /* muted blue-grey body copy */
+  --ink-faint:   #3a444c;          /* hairline hints, disabled states */
+  --rule:        #e8dcc433;        /* hairline border (cream @ 20% alpha) */
+  --rule-strong: #e8dcc466;        /* stronger hairline for active states */
+  --accent:      #c9602a;          /* warm orange — used sparingly (fire, lantern) */
+  --accent-soft: #c9602a55;        /* orange @ 33% alpha */
+  --accent-2:    #4a8aa3;          /* cool blue-grey accent */
+
+  /* Typography */
+  --font-display:
+    'Bank Gothic', 'Eurostile', 'Tw Cen MT', 'Arial Narrow Bold',
+    'Helvetica Neue Condensed Bold', sans-serif;
+  --font-mono:
+    'JetBrains Mono', 'IBM Plex Mono', 'Fira Mono', 'Source Code Pro',
+    'Courier New', monospace;
+  --font-pixel:
+    'VT323', 'Press Start 2P', 'Silkscreen', monospace;
+
+  --fs-display-xl: clamp(64px, 14vw, 220px);
+  --fs-display-lg: clamp(48px, 9vw, 140px);
+  --fs-display-md: clamp(32px, 5vw, 64px);
+  --fs-display-sm: clamp(20px, 3vw, 32px);
+  --fs-mono:       clamp(11px, 0.9vw, 13px);
+  --fs-mono-lg:    clamp(14px, 1.2vw, 17px);
+  --fs-body:       clamp(14px, 1.1vw, 16px);
+
+  --lh-tight: 0.95;
+  --lh-snug:  1.15;
+  --lh-body:  1.6;
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Frame */
+  --radius:        6px;
+  --radius-lg:     10px;
+  --border:        1px solid var(--rule);
+  --border-strong: 1px solid var(--rule-strong);
+
+  /* Layout */
+  --ticker-h:  44px;
+  --rail-h:    56px;
+  --gutter:    clamp(16px, 3vw, 32px);
+  --content-max: 1440px;
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast:   150ms;
+  --t-med:    300ms;
+  --t-slow:   600ms;
+
+  /* Texture overlay */
+  --scanline:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      rgba(232, 220, 196, 0.025) 3px,
+      transparent 4px
+    );
+}

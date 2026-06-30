@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050a0d" />
+  <title>WTF // Contact</title>
+  <meta name="description" content="Contact WTF — send a message or sign up for the weekly portal." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=VT323&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/tokens.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/pages.css" />
+
+  <link rel="icon" href="./assets/img/glyphs/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="shell">
+
+    <!-- ===== Ticker ===== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" data-ticker-items>
+        <span class="ticker__item">// CONTACT</span>
+        <span class="ticker__item">WTF // 003 OF 003</span>
+        <span class="ticker__item">OPEN CHANNEL</span>
+        <span class="ticker__item">REPLIES // USUALLY WITHIN 48H</span>
+        <span class="ticker__item">ゲートウェイ</span>
+        <span class="ticker__item">SYS 03 // 003140</span>
+        <span class="ticker__item">// CONTACT</span>
+        <span class="ticker__item">WTF // 003 OF 003</span>
+        <span class="ticker__item">OPEN CHANNEL</span>
+      </div>
+    </div>
+
+    <main class="shell__main">
+
+      <!-- Section header -->
+      <header>
+        <div class="section-header">
+          <div>
+            <h2 class="section-header__title">003 // Contact</h2>
+            <p class="muted mono" style="font-size: var(--fs-mono); letter-spacing: 0.15em; margin-top: var(--space-2);">
+              SEND A MESSAGE &nbsp;//&nbsp; I REPLY TO EVERYONE
+            </p>
+          </div>
+          <div class="section-header__meta">CHANNEL // OPEN</div>
+        </div>
+      </header>
+
+      <!-- Contact grid -->
+      <section class="contact-grid">
+
+        <!-- Bio / intro -->
+        <aside class="contact-bio">
+          <h3 class="contact-bio__heading">
+            I SHARE MY <em>WEEKLY</em>
+            <br />
+            MUSINGS ON BOOKS,
+            <br />
+            TECH, AND LIFE.
+          </h3>
+
+          <p class="mono" style="font-size: var(--fs-mono); letter-spacing: 0.1em; line-height: var(--lh-body);">
+            QUESTIONS, SUGGESTIONS, OR JUST WANT TO SAY HI?
+            <br />
+            USE THE FORM. EVERY MESSAGE LANDS DIRECTLY IN MY INBOX.
+          </p>
+
+          <div class="contact-bio__cta-row">
+            <a class="pill" href="./posts.html">002 // WRITINGS</a>
+            <a class="pill" href="./index.html">001 // HOME</a>
+          </div>
+        </aside>
+
+        <!-- Form -->
+        <form class="contact-form hud-window" id="contact-form" novalidate>
+          <div class="hud-window__label">MSG // TRANSMIT</div>
+          <div class="hud-window__index">003 / 003</div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="name">// NAME</label>
+            <input class="form-field__input" id="name" name="name" type="text"
+                   maxlength="100" required autocomplete="name" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="email">// EMAIL</label>
+            <input class="form-field__input" id="email" name="email" type="email"
+                   maxlength="200" required autocomplete="email" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="message">// MESSAGE</label>
+            <textarea class="form-field__textarea" id="message" name="message"
+                      maxlength="5000" required rows="6"></textarea>
+          </div>
+
+          <div style="display:flex; align-items:center; gap: var(--space-4); margin-top: var(--space-3);">
+            <button type="submit" class="pill pill--active" style="border-radius: 999px;">
+              &gt;&gt; TRANSMIT
+            </button>
+            <span class="mono" style="font-size: var(--fs-mono); color: var(--ink-faint); letter-spacing: 0.15em;">
+              MAX 5000 CHARS
+            </span>
+          </div>
+
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-foot">
+        COPYRIGHT WTF // <span id="year"></span> &nbsp;//&nbsp;
+        <a href="./index.html">HOME</a> &nbsp;//&nbsp;
+        <a href="./posts.html">WRITINGS</a>
+      </footer>
+    </main>
+
+    <!-- ===== Scroll rail ===== -->
+    <nav class="scroll-rail" data-scroll-rail aria-label="Section navigation">
+      <a class="scroll-rail__item" href="./index.html">
+        <span>001</span><span>// HOME</span>
+      </a>
+      <a class="scroll-rail__item" href="./posts.html">
+        <span>002</span><span>// WRITINGS</span>
+      </a>
+      <a class="scroll-rail__item is-active" href="./contact.html">
+        <span>003</span><span>// CONTACT</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/ticker.js"></script>
+  <script src="./assets/js/scroll-rail.js"></script>
+  <script src="./assets/js/contact.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

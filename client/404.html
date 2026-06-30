@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050a0d" />
+  <title>WTF // 404</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=VT323&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/tokens.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/pages.css" />
+
+  <link rel="icon" href="./assets/img/glyphs/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="shell">
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" data-ticker-items>
+        <span class="ticker__item">// 404</span>
+        <span class="ticker__item">SIGNAL LOST</span>
+        <span class="ticker__item">PORTAL NOT FOUND</span>
+        <span class="ticker__item">RETURN TO ENTRANCE</span>
+      </div>
+    </div>
+
+    <main class="shell__main">
+      <section class="notfound">
+        <div class="notfound__code">404</div>
+        <div class="notfound__msg">// THE PAGE YOU ARE LOOKING FOR HAS DRIFTED OUT OF THE PORTAL</div>
+        <a class="pill pill--active" href="./index.html">&gt;&gt; RETURN TO 001 // HOME</a>
+      </section>
+
+      <footer class="site-foot">
+        COPYRIGHT WTF // <span id="year"></span>
+      </footer>
+    </main>
+
+    <nav class="scroll-rail" data-scroll-rail aria-label="Section navigation">
+      <a class="scroll-rail__item" href="./index.html"><span>001</span><span>// HOME</span></a>
+      <a class="scroll-rail__item" href="./posts.html"><span>002</span><span>// WRITINGS</span></a>
+      <a class="scroll-rail__item" href="./contact.html"><span>003</span><span>// CONTACT</span></a>
+    </nav>
+  </div>
+
+  <script src="./assets/js/ticker.js"></script>
+  <script src="./assets/js/scroll-rail.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

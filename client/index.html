@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#050a0d" />
+  <title>WTF // Personal Portal</title>
+  <meta name="description" content="WTF — a personal blog gateway of musings, reviews, and writings." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=VT323&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/tokens.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/pages.css" />
+
+  <link rel="icon" href="./assets/img/glyphs/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="shell">
+
+    <!-- ===== Ticker ===== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" data-ticker-items>
+        <span class="ticker__item">// PORTAL ENTRANCE</span>
+        <span class="ticker__item">WTF // PERSONAL PORTAL</span>
+        <span class="ticker__item">BOOT SEQUENCE INITIATED</span>
+        <span class="ticker__item">PORTAL 01 OF 03</span>
+        <span class="ticker__item">STATUS // ONLINE</span>
+        <span class="ticker__item">PORTAL // WTF</span>
+        <span class="ticker__item">ゲートウェイ</span>
+        <span class="ticker__item">SYS 01 // 012540</span>
+        <span class="ticker__item">// PORTAL ENTRANCE</span>
+        <span class="ticker__item">WTF // PERSONAL PORTAL</span>
+        <span class="ticker__item">BOOT SEQUENCE INITIATED</span>
+        <span class="ticker__item">PORTAL 02 OF 03</span>
+      </div>
+    </div>
+
+    <!-- ===== Main ===== -->
+    <main class="shell__main">
+
+      <!-- ===== Hero ===== -->
+      <section class="home-hero" aria-label="WTF home portal">
+        <div class="home-hero__face" aria-hidden="true">
+          <img src="./assets/img/fallback-hero.svg" alt="" onerror="this.style.display='none'" />
+          <pre class="home-hero__ascii" data-ascii-hero></pre>
+        </div>
+
+        <div class="home-hero__copy">
+          <div>
+            <p class="home-hero__bio">
+              WTF IS A <strong>GATEWAY</strong> OF MUSINGS, REVIEWS, AND WRITINGS —
+              <br />
+              A COLLECTION OF POSTS ON BOOKS, TECH, THOUGHTS, AND THE
+              <br />
+              KIND OF WISDOM THAT ONLY SHOWS UP AT 2&nbsp;AM.
+            </p>
+          </div>
+
+          <div class="home-hero__stats" aria-label="WTF stats">
+            <div class="home-hero__stat">
+              <div class="home-hero__stat-value">04</div>
+              <div class="home-hero__stat-label">FOLDERS</div>
+            </div>
+            <div class="home-hero__stat">
+              <div class="home-hero__stat-value">∞</div>
+              <div class="home-hero__stat-label">POSTS</div>
+            </div>
+            <div class="home-hero__stat">
+              <div class="home-hero__stat-value">01</div>
+              <div class="home-hero__stat-label">WRITER</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Marquee wordmark ===== -->
+      <section class="home-marquee" aria-label="Initiate sequence">
+        <div class="home-marquee__row is-dim">INITIATE</div>
+        <div class="home-marquee__row is-active">SEQUENCE</div>
+        <div class="home-marquee__row is-accent">>> READ&nbsp;NOW</div>
+      </section>
+
+      <!-- ===== Phase strip (mimics ref1 phase cards) ===== -->
+      <section aria-label="What is WTF">
+        <div class="hud-window">
+          <div class="hud-window__label">001 // WHAT IS WTF</div>
+          <div class="hud-window__index">001 / 003</div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); padding-top: var(--space-3);">
+            <div>
+              <p style="color: var(--ink); margin-bottom: var(--space-4);">
+                A SMALL <strong style="color: var(--accent);">PERSONAL BLOG</strong> ABOUT FOUR SUBJECTS:
+                BOOKS I HAVE READ, TECH I HAVE BROKEN, THOUGHTS I CANNOT UNTHINK, AND LIFE I AM STILL LEARNING.
+              </p>
+              <p class="muted mono" style="font-size: var(--fs-mono); letter-spacing: 0.15em;">
+                >>> SCROLL DOWN FOR WRITINGS &nbsp;//&nbsp; OR HIT 002
+              </p>
+            </div>
+            <div>
+              <p class="mono" style="font-size: var(--fs-mono); letter-spacing: 0.15em; color: var(--ink-dim); text-transform: uppercase;">
+                POSTS: <span style="color: var(--ink);">0</span> &nbsp;//&nbsp; LATEST: —
+                <br />
+                FOLDERS: <span style="color: var(--ink);">04</span> &nbsp;//&nbsp; ACTIVE: 01
+                <br />
+                COMMENTS: <span style="color: var(--ink);">OFF</span> &nbsp;//&nbsp; SUBSCRIBERS: ?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Site footer ===== -->
+      <footer class="site-foot">
+        COPYRIGHT WTF // <span id="year"></span> &nbsp;//&nbsp;
+        <a href="./posts.html">WRITINGS</a> &nbsp;//&nbsp;
+        <a href="./contact.html">CONTACT</a>
+      </footer>
+    </main>
+
+    <!-- ===== Scroll rail ===== -->
+    <nav class="scroll-rail" data-scroll-rail aria-label="Section navigation">
+      <a class="scroll-rail__item is-active" href="./index.html">
+        <span>001</span><span>// HOME</span>
+      </a>
+      <a class="scroll-rail__item" href="./posts.html">
+        <span>002</span><span>// WRITINGS</span>
+      </a>
+      <a class="scroll-rail__item" href="./contact.html">
+        <span>003</span><span>// CONTACT</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/ticker.js"></script>
+  <script src="./assets/js/scroll-rail.js"></script>
+  <script src="./assets/js/ascii-hero.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

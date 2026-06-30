@@ -1,0 +1,435 @@
+/* =========================================================
+   components.css — HUD window, ticker, scroll-rail, pill, glyphs
+   ========================================================= */
+
+/* ---------- Layout container ---------- */
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.shell__main {
+  flex: 1;
+  padding: calc(var(--ticker-h) + var(--space-5)) var(--gutter)
+           calc(var(--rail-h) + var(--space-5));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+/* ---------- HUD window ---------- */
+.hud-window {
+  position: relative;
+  background: var(--bg-alt);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+.hud-window::before,
+.hud-window::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--ink);
+  pointer-events: none;
+}
+
+.hud-window::before {
+  top: -1px;
+  left: -1px;
+  border-right: 0;
+  border-bottom: 0;
+  border-top-left-radius: var(--radius);
+}
+
+.hud-window::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: 0;
+  border-top: 0;
+  border-bottom-right-radius: var(--radius);
+}
+
+.hud-window__label {
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  background: var(--bg);
+  padding: 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.15em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+}
+
+.hud-window__index {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Ticker (top status bar) ---------- */
+.ticker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--ticker-h);
+  background: var(--bg-deep);
+  border-bottom: var(--border);
+  z-index: 100;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.ticker__track {
+  display: flex;
+  gap: var(--space-7);
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker-scroll 40s linear infinite;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--ink-dim);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ticker__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ticker__sep {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-image: var(--glyph-checker, none);
+  background-color: var(--ink-dim);
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+/* ---------- Scroll rail (bottom nav) ---------- */
+.scroll-rail {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--rail-h);
+  background: var(--bg-deep);
+  border-top: var(--border);
+  z-index: 100;
+  display: flex;
+  align-items: stretch;
+}
+
+.scroll-rail__item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--ink-dim);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-right: var(--border);
+  transition: color var(--t-fast) var(--ease-out),
+              background var(--t-fast) var(--ease-out);
+}
+
+.scroll-rail__item:last-child { border-right: 0; }
+
+.scroll-rail__item:hover {
+  color: var(--ink-bright);
+  background: var(--bg-alt);
+}
+
+.scroll-rail__item.is-active {
+  color: var(--accent);
+  background: var(--bg-alt);
+}
+
+.scroll-rail__glyph {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+
+/* ---------- Pill button (segmented / toggle) ---------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--bg-alt);
+  border: var(--border);
+  border-radius: 999px;
+  transition: all var(--t-fast) var(--ease-out);
+}
+
+.pill:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.pill--active {
+  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* ---------- Pill group (segmented control) ---------- */
+.pill-group {
+  display: inline-flex;
+  gap: 0;
+  border: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.pill-group .pill {
+  border: 0;
+  border-radius: 999px;
+}
+
+/* ---------- Glyph row ---------- */
+.glyph-row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.glyph {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+
+.glyph--lg { width: 28px; height: 28px; }
+
+/* ---------- Cover card (used on posts.html) ---------- */
+.cover-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  transition: border-color var(--t-med) var(--ease-out),
+              transform var(--t-med) var(--ease-out);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cover-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.cover-card__art {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  background: var(--bg-deep);
+  border: var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 56px);
+  color: var(--ink-bright);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+
+.cover-card__art::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--scanline);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.cover-card__art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.4) contrast(1.05) brightness(0.85);
+}
+
+.cover-card__art-placeholder {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-sm);
+  color: var(--ink-dim);
+  text-align: center;
+  padding: var(--space-4);
+  line-height: var(--lh-tight);
+}
+
+.cover-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink-bright);
+}
+
+.cover-card__meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--ink-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ---------- Form ---------- */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.form-field__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.form-field__input,
+.form-field__textarea {
+  background: var(--bg-alt);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  transition: border-color var(--t-fast) var(--ease-out);
+}
+
+.form-field__textarea {
+  min-height: 160px;
+  resize: vertical;
+  font-family: var(--font-mono);
+  line-height: var(--lh-body);
+}
+
+.form-field__input:focus,
+.form-field__textarea:focus {
+  outline: 0;
+  border-color: var(--ink);
+}
+
+.form-status {
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: none;
+}
+
+.form-status.is-success {
+  display: block;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: var(--bg-alt);
+}
+
+.form-status.is-error {
+  display: block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: var(--bg-alt);
+}
+
+/* ---------- Section header ---------- */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border);
+  margin-bottom: var(--space-5);
+}
+
+.section-header__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink-bright);
+}
+
+.section-header__meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--ink-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ---------- Stack wordmark (used on home intro) ---------- */
+.stack-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 0.82;
+  font-family: var(--font-display);
+  font-size: clamp(60px, 11vw, 160px);
+  letter-spacing: -0.02em;
+  color: var(--ink-bright);
+  text-transform: uppercase;
+}
+
+.stack-wordmark span {
+  display: block;
+}
+
+.stack-wordmark span:nth-child(2) {
+  color: var(--accent);
+}
+
+/* ---------- Footer signature ---------- */
+.site-foot {
+  text-align: center;
+  padding: var(--space-5) var(--gutter);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--ink-faint);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-top: var(--border);
+}
